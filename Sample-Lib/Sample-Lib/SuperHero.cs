@@ -55,5 +55,22 @@ namespace SampleLib.SuperHeroes
             Alias = alias;
             Universe = universe;
         }
+
+        public string GetSideKick(string superheroname)
+        {
+            switch (superheroname)
+            {
+                case "Captain America":
+                    return "Bucky Barnes";
+                case "Batman":
+                    return "Robin";
+                case "Joker":
+                    return "Harley Quinn";
+                case "Captain Marvel":
+                    return "Goose";
+                default:
+                    return "";                  
+            }
+        }
     }
 }
