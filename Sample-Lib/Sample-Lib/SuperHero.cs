@@ -54,6 +54,7 @@ namespace SampleLib.SuperHeroes
         public long BadDeedsCommitted { get; set; }
         public int Age { get; set; }
         public int NumberofChickens { get; set; }
+        public string SideKickName { get; set; }
 
         public SuperHero(string superheroname, string alias, string planetoforigin, int socialsecuritynumber, UniverseType universe)
         {
@@ -62,6 +63,7 @@ namespace SampleLib.SuperHeroes
             SocialSecurityNumber = socialsecuritynumber;
             Alias = alias;
             Universe = universe;
+            SideKickName = GetSideKick(superheroname);
         }
 
         public string GetSideKick(string superheroname)
