@@ -32,6 +32,14 @@ namespace SampleLib.SuperHeroes
         Confused
     }
 
+    public enum Sidekick
+    {
+        None, 
+        Human,
+        Animal, 
+        Cyborg
+    }
+
     public class SuperHero
     {
         public string SuperHeroName { get; set; }
@@ -68,6 +76,8 @@ namespace SampleLib.SuperHeroes
                     return "Harley Quinn";
                 case "Captain Marvel":
                     return "Goose";
+                case "Doctor Strange":
+                    return "Wong";
                 default:
                     return "";                  
             }
