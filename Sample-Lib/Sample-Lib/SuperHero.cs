@@ -46,14 +46,12 @@ namespace SampleLib.SuperHeroes
         public string Alias { get; set; }
         public string PlanetofOrigin { get; set; }
         public List<SuperPower> SuperPowers { get; set; }
-        public int SocialSecurityNumber { get; set; }
         public UniverseType Universe { get; set; }
         public SuperHero Nemesis { get; set; }
         public Alignment alighnment { get; set; }
-        public int NumberofChickensInBackyard { get; set; }
         public long BadDeedsCommitted { get; set; }
         public int Age { get; set; }
-        public int NumberofChickens { get; set; }
+        public Sidekick SideKickType { get; set; }
         public string SideKickName { get; set; }
 
         public SuperHero(string superheroname, string alias, string planetoforigin, int socialsecuritynumber, UniverseType universe)
