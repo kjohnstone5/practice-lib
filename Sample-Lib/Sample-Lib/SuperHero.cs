@@ -48,20 +48,21 @@ namespace SampleLib.SuperHeroes
         public List<SuperPower> SuperPowers { get; set; }
         public UniverseType Universe { get; set; }
         public SuperHero Nemesis { get; set; }
-        public Alignment alighnment { get; set; }
+        public Alignment Alignment { get; set; }
         public long BadDeedsCommitted { get; set; }
         public int Age { get; set; }
         public Sidekick SideKickType { get; set; }
         public string SideKickName { get; set; }
 
-        public SuperHero(string superheroname, string alias, string planetoforigin, int socialsecuritynumber, UniverseType universe)
+        public SuperHero(string superheroname, string alias, string planetoforigin, int socialsecuritynumber, UniverseType universe, Alignment alignment)
         {
             SuperHeroName = superheroname;
             PlanetofOrigin = planetoforigin;
-            SocialSecurityNumber = socialsecuritynumber;
             Alias = alias;
             Universe = universe;
             SideKickName = GetSideKick(superheroname);
+            Age = GetAge();
+            Alignment = alignment;
         }
 
         public string GetSideKick(string superheroname)
@@ -81,6 +82,12 @@ namespace SampleLib.SuperHeroes
                 default:
                     return "";                  
             }
+        }
+
+        public int GetAge()
+        {
+            Random random = new Random();
+            return random.Next(500);
         }
     }
 }
