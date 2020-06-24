@@ -54,7 +54,7 @@ namespace SampleLib.SuperHeroes
         public Sidekick SideKickType { get; set; }
         public string SideKickName { get; set; }
 
-        public SuperHero(string superheroname, string alias, string planetoforigin, int socialsecuritynumber, UniverseType universe, Alignment alignment)
+        public SuperHero(string superheroname, string alias, string planetoforigin, int socialsecuritynumber, UniverseType universe)
         {
             SuperHeroName = superheroname;
             PlanetofOrigin = planetoforigin;
@@ -62,7 +62,7 @@ namespace SampleLib.SuperHeroes
             Universe = universe;
             SideKickName = GetSideKick(superheroname);
             Age = GetAge();
-            Alignment = alignment;
+            Alignment = GetAlignment();
         }
 
         public string GetSideKick(string superheroname)
@@ -88,6 +88,12 @@ namespace SampleLib.SuperHeroes
         {
             Random random = new Random();
             return random.Next(500);
+        }
+
+        public Alignment GetAlignment()
+        {
+            Random random = new Random();
+            return (Alignment)random.Next(4);
         }
     }
 }
